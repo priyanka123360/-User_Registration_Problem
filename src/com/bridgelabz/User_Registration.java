@@ -15,6 +15,10 @@ public class User_Registration {
 		pattern.addEmail();
 		email = pattern.getEmail();
 		System.out.println("Email : " + email);
+		
+		pattern.addPhoneNumber();
+		phoneNumber = pattern.getPhoneNumber();
+		System.out.println("PhoneNumber : " + phoneNumber);
 	}
 
 }

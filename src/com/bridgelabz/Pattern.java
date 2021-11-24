@@ -43,6 +43,19 @@ public class Pattern {
 				addEmail();
 			}
 		}
+		
+		public void addPhoneNumber() {
+			System.out.print("Enter Phone Number : ");
+			phoneNumber = sc.nextLine();
+			boolean check = phoneNumber.matches("^([0-9]{1,2})\\s([0-9]{10})$");
+			if (check == true) {
+				System.out.println("Valid");
+			} else {
+				System.out.println("Invalid Phone Number ");	
+				addPhoneNumber();
+			}
+		}
+
 
 	public String getFirstName() {
 		return firstName;

@@ -11,6 +11,10 @@ public class User_Registration {
 		pattern.addLastName();
 		lastName = pattern.getLastName();
 		System.out.println("Last Name : " + lastName);
+		
+		pattern.addEmail();
+		email = pattern.getEmail();
+		System.out.println("Email : " + email);
 	}
 
 }

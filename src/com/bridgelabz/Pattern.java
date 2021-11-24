@@ -25,11 +25,24 @@ public class Pattern {
 			lastName = sc.nextLine();
 			boolean check = lastName.matches("^([A-Z]{1}+[a-z]{2,})*$");
 			if (check == true) {
+				System.out.println("Valid");
 			} else {
-				System.out.println("Invalid Add again (Eg:Tenzing)");
+				System.out.println("Invalid Add again");
 				addLastName();
 			}
 	}
+		
+		public void addEmail() {
+			System.out.print("Enter Email : ");
+			email = sc.nextLine();
+			boolean check = email.matches("^[0-9a-zA-Z+-._]+@[-+_.0-9a-zA-Z]*.[a-zA-Z]{2,3}.([a-zA-z]{2,3})*$");
+			if (check == true) {
+				System.out.println("Valid");
+			} else {
+				System.out.println("Invalid Email Add again");
+				addEmail();
+			}
+		}
 
 	public String getFirstName() {
 		return firstName;

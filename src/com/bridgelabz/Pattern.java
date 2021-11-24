@@ -59,7 +59,7 @@ public class Pattern {
 		public void addPassword() {
 			System.out.print("Enter Password : ");
 			password = sc.nextLine();
-			boolean check = password.matches("^(?=.*[A-Z])(?=.*[0-9]).{8,}$");// Rule3:Should have Atleast 1 numeric number
+			boolean check = password.matches("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[@]).{8,}$");// Rule4:Should have 1 special Character.
 			if (check == true) {
 				System.out.println("Valid");
 			} else {

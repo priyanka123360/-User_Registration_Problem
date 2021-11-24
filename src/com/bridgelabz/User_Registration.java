@@ -19,6 +19,10 @@ public class User_Registration {
 		pattern.addPhoneNumber();
 		phoneNumber = pattern.getPhoneNumber();
 		System.out.println("PhoneNumber : " + phoneNumber);
+		
+		pattern.addPassword();
+		password = pattern.getPassword();
+		System.out.println("Password : " + password);
 	}
 
 }

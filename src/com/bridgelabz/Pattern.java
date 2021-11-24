@@ -19,6 +19,17 @@ public class Pattern {
 			isValidName();
 		}
 	}
+		public void addLastName() {
+
+			System.out.print("Enter Last Name : ");
+			lastName = sc.nextLine();
+			boolean check = lastName.matches("^([A-Z]{1}+[a-z]{2,})*$");
+			if (check == true) {
+			} else {
+				System.out.println("Invalid Add again (Eg:Tenzing)");
+				addLastName();
+			}
+	}
 
 	public String getFirstName() {
 		return firstName;

@@ -7,6 +7,10 @@ public class User_Registration {
 		pattern.isValidName();
 		firstName = pattern.getFirstName();
 		System.out.println("First Name : "+firstName);
+		
+		pattern.addLastName();
+		lastName = pattern.getLastName();
+		System.out.println("Last Name : " + lastName);
 	}
 
 }

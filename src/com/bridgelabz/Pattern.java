@@ -14,7 +14,7 @@ public class Pattern {
 	User_Data user_Data = User_Data.getInstance();
 	Scanner sc = new Scanner(System.in);
 
-	private Pattern() {
+	Pattern() {
 
 	}
 
@@ -54,23 +54,24 @@ public class Pattern {
 			System.out.println("Invalid ");
 
 		}
-
+		
 	}
 
-	public void addEmail() {
+	public boolean addEmail(String emailAddress) {
 		System.out.print("Enter Email : ");
-		String email = sc.nextLine();
-		user_Data.setEmail(EMAIL);
+		String email = emailAddress;
+		user_Data.setEmail(email);
 		boolean check = user_Data.getEmail().matches(EMAIL);
-//		if (check == true) {
-//			user_Data.setEmail(EMAIL);
-//			System.out.println("Valid");
-//		} else {
-//			System.out.println("Invalid");
-//
-//		}
+		if (check == true) {
+		//	user_Data.setEmail(EMAIL);
+			System.out.println("Valid");
+		} else {
+			System.out.println("Invalid");
 
+		}
+		return check;
 	}
+	
 
 	public void addPhoneNumber() {
 		System.out.print("Enter Phone Number : ");

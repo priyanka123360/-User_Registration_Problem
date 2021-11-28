@@ -2,27 +2,29 @@ package com.bridgelabz;
 
 public class User_Registration { 
 	public static void main(String[] args) {
-		String firstName, lastName, email, password, phoneNumber;
-		Pattern pattern = new Pattern();
+		
+		Pattern pattern = Pattern.getInstance();
+		User_Data user_Data = User_Data.getInstance();
+	
 		pattern.isValidName();
-		firstName = pattern.getFirstName();
-		System.out.println("First Name : "+firstName);
+		user_Data.firstName = user_Data.getFirstName();
+	
 		
 		pattern.addLastName();
-		lastName = pattern.getLastName();
-		System.out.println("Last Name : " + lastName);
+		user_Data.lastName = user_Data.getLastName();
+		
 		
 		pattern.addEmail();
-		email = pattern.getEmail();
-		System.out.println("Email : " + email);
+		user_Data.email = user_Data.getEmail();
+		
 		
 		pattern.addPhoneNumber();
-		phoneNumber = pattern.getPhoneNumber();
-		System.out.println("PhoneNumber : " + phoneNumber);
+		user_Data.phoneNumber = user_Data.getPhoneNumber();
+		
 		
 		pattern.addPassword();
-		password = pattern.getPassword();
-		System.out.println("Password : " + password);
+		user_Data.password = user_Data.getPassword();
+		
 	}
 
 }

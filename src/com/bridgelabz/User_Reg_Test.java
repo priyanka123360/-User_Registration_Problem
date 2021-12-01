@@ -17,27 +17,28 @@ public class User_Reg_Test {
 	}
 
 	@Test
-	public void test_Added_FistName_Should_Be_Valid() {
+	public void test_Added_FistName_Should_Be_Valid() throws InvalidUserDetailException {
+
 		pattern.isValidName();
 		System.out.println(user_Data.getFirstName().matches(Pattern.NAME));
 		assertEquals(true, user_Data.getFirstName().matches(Pattern.NAME));
 	}
 
 	@Test
-	public void test_Added_FistName_Should_Be_InValid() {
+	public void test_Added_FistName_Should_Be_InValid() throws InvalidUserDetailException {
 		pattern.isValidName();
 		System.out.println(user_Data.getFirstName().matches(Pattern.NAME));
 		assertEquals(false, user_Data.getFirstName().matches(Pattern.NAME));
 	}
 
 	@Test
-	public void test_Added_LastName_Should_Be_Valid() {
+	public void test_Added_LastName_Should_Be_Valid()  throws InvalidUserDetailException{
 		pattern.addLastName();
 		assertEquals(true, user_Data.getLastName().matches(Pattern.NAME));
 	}
 
 	@Test
-	public void test_Added_LastName_Should_Be_InValid() {
+	public void test_Added_LastName_Should_Be_InValid()  throws InvalidUserDetailException{
 		pattern.addLastName();
 		assertEquals(false, user_Data.getLastName().matches(Pattern.NAME));
 	}
@@ -55,27 +56,27 @@ public class User_Reg_Test {
 //	}
 
 	@Test
-	public void test_Added_PhoneNumber_Should_Be_Valid() {
+	public void test_Added_PhoneNumber_Should_Be_Valid()  throws InvalidUserDetailException {
 		pattern.addPhoneNumber();
 		System.out.println(user_Data.getPhoneNumber().matches(Pattern.PHONE_NUMBER));
 		assertEquals(true, user_Data.getPhoneNumber().matches(Pattern.PHONE_NUMBER));
 	}
 
 	@Test
-	public void test_Added_PhoneNumber_Should_Be_InValid() {
+	public void test_Added_PhoneNumber_Should_Be_InValid()  throws InvalidUserDetailException {
 		pattern.addPhoneNumber();
 		System.out.println(user_Data.getPhoneNumber().matches(Pattern.PHONE_NUMBER));
 		assertEquals(false, user_Data.getPhoneNumber().matches(Pattern.PHONE_NUMBER));
 	}
 
 	@Test
-	public void test_Added_Password_Should_Be_Valid() {
+	public void test_Added_Password_Should_Be_Valid()  throws InvalidUserDetailException {
 		pattern.addPassword();
 		assertEquals(true, user_Data.getPassword().matches(Pattern.PASSWORD));
 	}
 
 	@Test
-	public void test_Added_Password_Should_Be_InValid() {
+	public void test_Added_Password_Should_Be_InValid()  throws InvalidUserDetailException {
 		pattern.addPassword();
 		assertEquals(false, user_Data.getPassword().matches(Pattern.PASSWORD));
 	}

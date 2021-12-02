@@ -1,5 +1,7 @@
 package com.bridgelabz;
 
+
+
 import static org.junit.Assert.assertEquals;
 
 import java.util.Arrays;
@@ -56,7 +58,7 @@ public class EmailTest {
 	}
 	
 	@Test
-	public void testValidEmails() throws InvalidUserDetailException {
+	public void testValidEmails() {
 		assertEquals(expectedResult,pattern.addEmail(emailAddress));
 	}
 }

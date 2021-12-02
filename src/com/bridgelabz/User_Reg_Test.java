@@ -17,7 +17,7 @@ public class User_Reg_Test {
 	}
 
 	@Test
-	public void test_Added_FistName_Should_Be_Valid() throws InvalidUserDetailException {
+	public void test_Added_FistName_Should_Be_Valid() {
 
 		pattern.isValidName();
 		System.out.println(user_Data.getFirstName().matches(Pattern.NAME));

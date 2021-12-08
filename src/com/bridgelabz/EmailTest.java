@@ -59,7 +59,10 @@ public class EmailTest {
 	
 	@Test
 	public void testValidEmails() {
+		I_User_Reg isvalidateEmail = (Email) -> {
 		assertEquals(expectedResult,pattern.addEmail(emailAddress));
+		return false;
+	};
 	}
 }
 	
